@@ -5,7 +5,6 @@ const URL = 'https://api.lyrics.ovh/v1/'
 // const API_KEY = '';
 
 // Tämän API:n käyttöön ei tarvittu Api-avainta, joten jätän sen kohdan tyhjäksi,
-// sekä kommentiksi koodiin, jossa sen olisi kuulunut olla
 
 function App() {
 
@@ -17,7 +16,7 @@ function App() {
   async function search(e) {
     e.preventDefault();
     try {
-      const address = URL /* + API_KEY + '/' */ + artist + '/' + title;
+      const address = URL + artist + '/' + title;
       const response = await fetch(address);
 
       if (response.ok) {
